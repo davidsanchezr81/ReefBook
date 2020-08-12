@@ -1,0 +1,44 @@
+.header
+{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: rgb(192, 45, 26);
+    color: #0d4d68;
+    /* position: fixed; */
+  }
+
+  .header h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: center;
+    display: block;
+    font-size: 2em;
+    /* margin-top: 0.67em;
+    margin-bottom: 0.67em; */
+    
+    font-weight: bold;
+    padding-right: 400px;
+    margin: 1px; 
+}
+
+.title{
+    position: left;
+}
+
+ul { /*text header*/
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    border: 2px dashed #f69c55;
+
+}
+
+ul li {
+    outline: 0 none;
+    display: inline-block;
+    padding: 0 2.6em;
+    margin: 0;
+}
