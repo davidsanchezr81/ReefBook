@@ -27,7 +27,7 @@ class App extends Component {
             <div>
                 <Header
                     name="David"
-                />,
+                />
                 <div><Content /></div>
             </div>
         );

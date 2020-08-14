@@ -9,8 +9,9 @@
     margin-bottom: 2em;
     background-color: blu;
     color: #047fb4;
+ 
   }
 
-.content h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.content div{
+    width:10000px;
 }

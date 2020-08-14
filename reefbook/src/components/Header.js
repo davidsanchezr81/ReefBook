@@ -5,26 +5,13 @@ class Header extends React.Component {
    render() {
       return (
          <div className="header">
-           <div className="header title">
-            <h1>Reefbook</h1>
-            </div>
-            {/* <p> {this.props.name} </p> */}
-            <button type="button" class="button1">About us</button>
-            <div >
-               <div class="menu">
-                  <ul class="nav">
-                     <li id="nav-products"><a href="#">Products</a></li>
-                     <li id="nav-contact"><a href="#">Contact</a></li>
-                     <li id="nav-about"><a href="#">About</a></li>
-                  </ul>
-                  <div class="logo">
-
-                  </div>
-               </div>
-            </div>
+         <a href="#default" className="logo">Company Logo</a>
+         <div className="header-right">
+           <a className="active" href="#home">Home</a>
+           <a href="#contact">Contact</a>
+           <a href="#about">About</a>
          </div>
-
-
+       </div>
       );
    }
 }
