@@ -17,27 +17,28 @@ const images = [
         super(props);
         this.state = { apiResponse: "" };
     }
+    // ------ Service connection ------
+    // callReefBookServices() {
+    //     fetch("http://localhost:9000/ReefBookServices")
+    //         .then(res => res.text())
+    //         .then(res => this.setState({ apiResponse: res }))
+    //         .then(err => err);
+    // }
 
-    callReefBookServices() {
-        fetch("http://localhost:9000/ReefBookServices")
-            .then(res => res.text())
-            .then(res => this.setState({ apiResponse: res }))
-            .then(err => err);
-    }
-
-    componentWillMount() {
-        this.callReefBookServices();
-    }
+    // componentWillMount() {
+    //     this.callReefBookServices();
+    // }
     render() {
         return (
             
-            <div>
-                {/* <Header
-                    name="David"
-                />
-                <div><Content /></div> */}
-                <div><Slider  slides={images} /></div>
+            <div>               
+               <div >
+                <Header />
             </div>
+                <div><Slider  slides={images} /></div>
+                
+            </div>
+
         );
     }
 }
