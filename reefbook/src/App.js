@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Header from './components/Header'
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Slider from './components/Slider';
-// import logo from './logo.svg';
+import Tank1 from './images/Tank1.jpg';
+import Tank2 from './images/Tank2.jpg';
+import Tank3 from './images/Tank3.jpg';
+import Tank4 from './images/Tank4.jpg';
 // import './App.css';
 
 
-const images = [
-    'https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
-    'https://images.unsplash.com/photo-1470341223622-1019832be824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2288&q=80',
-    'https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2094&q=80',
-    'https://images.unsplash.com/photo-1534161308652-fdfcf10f62c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2174&q=80'
-  ]
+const images = [Tank1,Tank2,Tank3,Tank4]
+
   
  class App extends Component {
     constructor(props) {
@@ -36,9 +36,10 @@ const images = [
                 <Header />
             </div>
                 <div><Slider  slides={images} /></div>
-                
+                <div >
+                <Footer />
+            </div>                
             </div>
-
         );
     }
 }
