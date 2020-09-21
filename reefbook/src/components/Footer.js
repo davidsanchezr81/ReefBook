@@ -7,9 +7,9 @@ class Footer extends Component{
          <div className="footer">
          <a href="#default" className="logo"></a>
          <div className="footer-right">
-           <a className="active" href="#instagram">Instagram</a>
-           <a href="#twitter">Twitter</a>
-           <a href="#facebook">Facebook</a>
+           <a href="#instagram" className="fa fa-instagram"></a>
+           <a href="#twitter" className="fa fa-twitter"></a>
+           <a href="#facebook" className="fa fa-facebook"></a>
          </div>
        </div>
       );

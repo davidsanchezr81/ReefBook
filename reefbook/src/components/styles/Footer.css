@@ -3,4 +3,17 @@ footer {
     background-color: red;
     padding: 20px 10px;
     position:fixed;
+    
+  }
+
+.footer-right a{
+  display: block;
+ color: red;
+}
+
+footer a{
+   position: center;
+   display: block;
+   margin: 0 auto; 
+
   }
