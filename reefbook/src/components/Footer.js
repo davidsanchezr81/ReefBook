@@ -5,7 +5,7 @@ class Footer extends Component{
    render() {
       return (
          <div className="footer">
-         <a href="#default" className="logo">Logo</a>
+         <a href="#default" className="logo"></a>
          <div className="footer-right">
            <a className="active" href="#instagram">Instagram</a>
            <a href="#twitter">Twitter</a>

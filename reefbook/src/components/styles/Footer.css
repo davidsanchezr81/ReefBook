@@ -1,0 +1,6 @@
+footer {
+    overflow: hidden;
+    background-color: red;
+    padding: 20px 10px;
+    position:fixed;
+  }
