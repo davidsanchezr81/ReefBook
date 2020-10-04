@@ -1,19 +1,23 @@
 footer {
     overflow: hidden;
-    background-color: red;
+    color: red;
     padding: 20px 10px;
-    position:fixed;
-    
+    position:fixed;    
   }
 
-.footer-right a{
-  display: block;
- color: red;
+.footer-center {
+  position: relative;
+  background-color: yellow;
+}
+
+.footer-center a{
+  display: inline-block;
+  color:black;
+  position: relative;
 }
 
 footer a{
    position: center;
    display: block;
    margin: 0 auto; 
-
   }

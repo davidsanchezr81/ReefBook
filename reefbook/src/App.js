@@ -2,6 +2,7 @@ import React, { Component, Fragment, useEffect, useRef, useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Slider from './components/Slider';
+import Content from './components/Content';
 import Tank1 from './images/Tank1.jpg';
 import Tank2 from './images/Tank2.jpg';
 import Tank3 from './images/Tank3.jpg';
@@ -33,7 +34,8 @@ function App() {
         <Navbar />
       </div>
       <div><Slider className="slider" slides={images} /></div>
-      <div ><Footer /></div>
+      <div><Content className="content"/></div>
+      <div><Footer /></div>
     </div>
   );
 }

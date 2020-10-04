@@ -1,21 +1,22 @@
-.sticky-wrapper {
-  position: relative;
-  height: 2rem;
-}
 
-.sticky-inner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  background-color: rosybrown;
-}
+  .sticky-wrapper {
+    position: relative;
+    height: 2rem; 
+  }
 
-ul#horizontal-list li {
-  display: inline;
-}
+  .sticky-inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rosybrown;
+  }
 
+  ul#horizontal-list li{
+display: inline;
+  } 
+ 
 
 /* Style the header links */
 a {
@@ -29,20 +30,19 @@ a {
   border-radius: 4px;
 }
 
-a:hover {
+a:hover{
   background-color: #ddd;
   color: black;
 }
 
-header {
-  height: 4rem
+header{
+  height:4rem
 }
-
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
-  color: black
+  color:black
 }
 
 /* Change the background color on mouse-over */
@@ -69,7 +69,6 @@ header {
     display: block;
     text-align: left;
   }
-
   .header-right {
     float: none;
   }
