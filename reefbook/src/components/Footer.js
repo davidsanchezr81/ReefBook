@@ -5,11 +5,10 @@ class Footer extends Component{
    render() {
       return (
          <div className="footer">
-         <a href="#default" className="logo"></a>
          <div className="footer-center">
-           <a href="#instagram" className="fa fa-instagram"></a>
-           <a href="#twitter" className="fa fa-twitter"></a>
-           <a href="#facebook" className="fa fa-facebook"></a>
+            <div style={{"padding-right":"150px"}}><a href="#instagram" className="fa fa-instagram" ></a></div>
+            <div><a href="#twitter" className="fa fa-twitter"></a></div>
+            <div style={{"padding-left":"150px"}}><a href="#facebook" className="fa fa-facebook" style={{}}></a></div>       
          </div>
        </div>
       );
