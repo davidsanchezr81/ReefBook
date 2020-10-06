@@ -8,9 +8,9 @@ const Navbar = ({ }) => {
       <div className="header">
          <a href="#default" className="logo">Reefbook</a>               
           <div className="navbar-right">
-           <a className="active" href="#home">Home</a>
-           <a href="#contact">Contact</a>
-           <a href="#about">About</a>
+           <a className="active" href="/Home">Home</a>
+           <a href="/BecomeAReefer">Become a Reefer</a>
+           <a href="/ReefHub">Reef Hub</a>
          </div> 
          </div>      
       </div>

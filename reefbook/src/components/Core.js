@@ -12,7 +12,6 @@ import './styles/Core.css';
 const images = [Tank1, Tank2, Tank3, Tank4]
 function Core() {
 
-
   const [isSticky, setSticky] = useState(false);
   const ref = useRef(null);
   const handleScroll = () => {
@@ -30,16 +29,14 @@ function Core() {
   }, []);
 
   return (
-    <div>
-     
-    <div className={`sticky-wrapper${isSticky ? ' sticky' : ''}`} ref={ref}>
-      <Navbar />
-    </div>
-    <div><Slider className="slider" slides={images} /></div>
-    <div><Content className="content"/></div>
-    <div><Footer /></div>      
-  </div> );
+    <div>     
+        <div className={`sticky-wrapper${isSticky ? ' sticky' : ''}`} ref={ref}> 
+        <Navbar />
+        </div>
+        <div><Slider className="slider" slides={images} /></div>
+        <div><Content className="content"/></div>
+        <div><Footer /></div>      
+    </div> );
 }
-
 
 export default Core;
