@@ -1,12 +1,13 @@
-var express = require('express');
-const app = require('./app');
-var router = express.Router();
+const express = require('express');
+const app = express();
+// var router = express.Router();
 
-// /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
-// module.exports = router;
+//Import Routes
+const authRoute = require('./routes/auth');
+
+//Route Middlewares
+app.use('/api/user', authRoute);
+
+app.listen(3000, () => console.log('Server Up and Running'));
 
 
-app.listen(9000, () => console.log('Server Up and Running'));
