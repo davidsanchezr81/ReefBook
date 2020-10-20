@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const User = require('../model/User');
-const {registerValidation} = require('../validation')
+const jwt = require('jsonwebtoken');
+const {registerValidation, loginValidation} = require('../validation')
 const bcrypt = require('bcryptjs');
 
+//REGISTER
 router.post('/register' , async (req, res) => {
 
     //Validation before creating a user
@@ -11,7 +13,7 @@ router.post('/register' , async (req, res) => {
 
     //Check if the user already exist in the database
    const emailExist = await User.findOne({email : req.body.email})
-   if(emailExist) return res.status(400).send('Email alrady exists');
+   if(emailExist) return res.status(400).send('Email already exists');
 
     //Hash the password
    const salt = await bcrypt.genSalt(10);
@@ -31,6 +33,25 @@ router.post('/register' , async (req, res) => {
    {
     res.status(400).send(err);
    }
+});
+
+//LOGIN
+router.post('/login', async (req, res) => {
+
+    const { error } = loginValidation(req.body);
+    if(error)return res.status(400).send(error.details[0].message);
+
+    //Check if the email already exist in the database
+    const user = await User.findOne({email : req.body.email})
+    if(!user) return res.status(400).send('Email is not found');
+
+    //Check if password is correct
+    const validPass = await bcrypt.compare(req.body.password, user.password);
+    if(!validPass) return res.status(400).send('Invalid Password');
+
+    //Create and assign token
+    const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET);
+    res.header('auth-token', token).send(token);
 });
 
 module.exports = router;
