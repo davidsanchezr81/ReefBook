@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from "../images/logo.svg";
-import Sticky from './styles/Navbar.css'
+import Sticky from './styles/Navbar.css';
 
 const Navbar = ({ }) => {
     return (      

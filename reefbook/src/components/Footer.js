@@ -6,9 +6,9 @@ class Footer extends Component{
       return (
          <div className="footer">
          <div className="footer-center">
-            <div style={{"padding-right":"150px"}}><a href="#instagram" className="fa fa-instagram" ></a></div>
+            <div style={{"paddingRight":"150px"}}><a href="#instagram" className="fa fa-instagram" ></a></div>
             <div><a href="#twitter" className="fa fa-twitter"></a></div>
-            <div style={{"padding-left":"150px"}}><a href="#facebook" className="fa fa-facebook" style={{}}></a></div>       
+            <div style={{"paddingLeft":"150px"}}><a href="#facebook" className="fa fa-facebook" style={{}}></a></div>       
          </div>
        </div>
       );

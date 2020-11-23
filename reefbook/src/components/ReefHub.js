@@ -1,4 +1,4 @@
- import React, { Component } from 'react';
+import React, { Component } from 'react';
 
 class ReefHub extends Component {
   constructor(props) {

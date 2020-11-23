@@ -7,4 +7,4 @@ const Content = ({ c}) => (
     </div>     
   )
   
-  export default Content
+export default Content;
