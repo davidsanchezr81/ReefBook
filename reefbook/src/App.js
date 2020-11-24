@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   callAPI() {
-    fetch("http://localhost:4000/testAPI")
+    fetch("http://localhost:4000/api/testAPI")
       .then(res => res.text())
       .then(res => this.setState({ apiResponse: res }))
       .catch(err => err);
@@ -28,8 +28,7 @@ class App extends Component {
     return (      
       <Router>
         <Switch>
-      {/* <div><h1>Test</h1></div>
-          <div><p>{this.state.apiResponse}</p></div> */}
+          {/* <p>{this.state.apiResponse}</p> */}
           <Route exact path="/" component={Core} props={this.state}/> 
           <Route exact path="/" render={(props) => (<Core {...props} />)}/>
           <Route exact path="/Home" component={Home} />
@@ -39,6 +38,7 @@ class App extends Component {
           <Redirect to="/404" />
         </Switch>
       </Router>
+      // <div><p>{this.state.apiResponse}</p></div>
     );
   }
 }
