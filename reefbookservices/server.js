@@ -31,6 +31,7 @@ app.use(bodyParser.json());
 
 
 //Route Middlewares
+// app.use('/api/user', authRoute);
 app.use('/api/user', authRoute);
 app.use('/api/posts', postRoute);
 app.use('/api/testAPI', testAPIRouter);

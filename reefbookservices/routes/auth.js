@@ -3,12 +3,15 @@ const User = require('../model/User');
 const jwt = require('jsonwebtoken');
 const {registerValidation, loginValidation} = require('../validation')
 const bcrypt = require('bcryptjs');
+const cors = require('cors');
 
+
+router.use(cors());
 //REGISTER
 router.post('/register' , async (req, res) => {
 
     //Validation before creating a user
-   const { error } = registerValidation(req.body);
+   const { error } = registerValidation(req.body); // registerValidation checks that the user data complies
    if(error) return res.status(400).send(error.details[0].message);
 
     //Check if the user already exist in the database
@@ -21,7 +24,7 @@ router.post('/register' , async (req, res) => {
    const salt = await bcrypt.genSalt(saltRounds);
    const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
-   //Create a new user
+   //Create a new usera
    const user = new User({
         name: req.body.name,
         email: req.body.email,

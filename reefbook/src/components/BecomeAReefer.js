@@ -1,28 +1,25 @@
 import React, { useState } from 'react';
-
-
+import Axios from 'axios';
 
 function BecomeAReefer(){
 
   const[usernameReg, setUsernameReg] = useState("");
   const[emailReg, setEmailReg] = useState(""); 
   const[passwordReg, setPasswordReg] = useState(""); 
-
+  
   const register = () => {
-    fetch("http://localhost4000/api/register")
-    .then(res => res.text())
-    .then(res => this.setState({ 
+    Axios.post("http://localhost:4000/api/user/register", {
       name: usernameReg,
       email: emailReg,
       password: passwordReg, 
-    }))
-    .catch(err => err);   
-  }
+    }).then((response) => {
+      console.log(response);
+    });
+  };
 
   return (
     <div>
         <h1>Become a Reefer</h1>
-        {/* <h2>{this.state.apiResponse}</h2> */}
         <div className="registration">
         <label>Username</label>
         <input type="text" onChange={(e) => {setUsernameReg(e.target.value);}} /> 
