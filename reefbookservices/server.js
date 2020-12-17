@@ -39,4 +39,3 @@ app.use('/api/testAPI', testAPIRouter);
 
 app.listen(4000, () => console.log('Server Up and Running')); 
 
-module.exports = app;
